@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Jouse</title>
+</head>
+<body>
+  <button id='btn1'>clik me</button>
+  <button id='btn2'>find out</button>
+  <p id='p1'</p>
+  <p id='p2'</p>
+<script>
+
+let p1 = document.querySelector('#p1');
+let p2 = document.querySelector('#p2');
+let btn1 = document.querySelector('#btn1');
+let btn2 = document.querySelector('#btn2');
+undefined
+btn1.setAttribute('data-onclick', '0');
+undefined
+btn1.addEventListener('click', function () {
+    btn1.dataset.onclick = parseInt(btn1.dataset.onclick) +1;
+    p1.textContent = btn1.dataset.onclick;
+});
+undefined
+btn2.addEventListener('click', function () {
+    p2.textContent = p1.textContent;
+});
+</script>
+</body>
+</html>
